@@ -1,3 +1,4 @@
+import { render } from "@testing-library/react";
 import React from "react";
 import tree from "../api/tree";
 import SearchBar from "./SearchBar";
@@ -12,11 +13,17 @@ class App extends React.Component {
     this.setState({ result: response.data.result });
   };
 
+  renderTree() {
+    if (Object.keys(this.state.result).length !== 0) {
+      return <TreeInfo result={this.state.result} />;
+    }
+  }
+
   render() {
     return (
       <div className="ui container" style={{ marginTop: "10px" }}>
         <SearchBar onSubmit={this.onSearchSubmit} />
-        <TreeInfo result={this.state.result} />
+        {this.renderTree()}
       </div>
     );
   }
