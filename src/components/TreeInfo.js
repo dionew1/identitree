@@ -3,28 +3,22 @@ import React from "react";
 import Spinner from "./Spinner";
 
 class TreeInfo extends React.Component {
-  state = { isLoading: true };
-
-  imageLoaded = () => {
-    this.setState({ isLoading: false });
-  };
-
   renderContent() {
     return (
       <React.Fragment>
-        <div style={{ display: this.state.isLoading ? "block" : "none" }}>
+        <div style={{ display: this.props.isLoading ? "block" : "none" }}>
           <Spinner />
         </div>
 
         <img
           style={{
-            display: this.state.isLoading ? "none" : "block",
+            display: this.props.isLoading ? "none" : "block",
             maxWidth: "500px",
           }}
           width="100%"
           src={this.props.result.image_url}
           alt={this.props.result.name}
-          onLoad={this.imageLoaded}
+          onLoad={this.props.imageLoaded}
         />
       </React.Fragment>
     );
