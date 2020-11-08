@@ -16,6 +16,7 @@ class SearchBar extends React.Component {
             <label>Which Tree Am I?</label>
             <input
               type="text"
+              placeholder="Your Name"
               value={this.state.term}
               onChange={(e) => this.setState({ term: e.target.value })}
             />
