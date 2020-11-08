@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/identitree/static/js/main.e432c242.chunk.js",
-    "main.js.map": "/identitree/static/js/main.e432c242.chunk.js.map",
+    "main.js": "/identitree/static/js/main.c9749e78.chunk.js",
+    "main.js.map": "/identitree/static/js/main.c9749e78.chunk.js.map",
     "runtime-main.js": "/identitree/static/js/runtime-main.4e5836d9.js",
     "runtime-main.js.map": "/identitree/static/js/runtime-main.4e5836d9.js.map",
     "static/js/2.8ac064f2.chunk.js": "/identitree/static/js/2.8ac064f2.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.4e5836d9.js",
     "static/js/2.8ac064f2.chunk.js",
-    "static/js/main.e432c242.chunk.js"
+    "static/js/main.c9749e78.chunk.js"
   ]
 }
