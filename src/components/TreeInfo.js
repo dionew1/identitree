@@ -17,7 +17,11 @@ class TreeInfo extends React.Component {
         </div>
 
         <img
-          style={{ display: this.state.isLoading ? "none" : "block" }}
+          style={{
+            display: this.state.isLoading ? "none" : "block",
+            maxWidth: "500px",
+          }}
+          width="100%"
           src={this.props.result.image_url}
           alt={this.props.result.name}
           onLoad={this.imageLoaded}
@@ -28,10 +32,21 @@ class TreeInfo extends React.Component {
 
   render() {
     return (
-      <div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "column",
+          background: "rgba(115, 102, 217, 0.7)",
+          padding: "5px",
+          color: "#efefef",
+        }}
+      >
         <h2>{this.props.result.name}</h2>
         {this.renderContent()}
-        <p>{this.props.result.description}</p>
+        <p style={{ padding: "10px 0", textAlign: "center" }}>
+          {this.props.result.description}
+        </p>
       </div>
     );
   }
